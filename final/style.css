@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body{
+    background-color: rgb(34, 33, 33);
+    font-family: "Nunito", serif;
+    display: flex;
+    /* justify-content: center; */
+}
+
+.phone{
+    height: 95vh;
+    width: 25vw;
+    min-width: 350px;
+    border: 5px solid white;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #fde2bb, #e88a3f);
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+input{
+    padding: 0px 10px;
+    height: 30px;
+    width: 220px;
+    border-radius: 10px;
+    border: 0px;
+    font-size: 17px;
+}
+
+button{
+    height: 32px;
+    width: 32px;
+    border-radius: 40px;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.text{
+    line-height: 10px;
+    margin: 30px;
+    margin-top: 70px;
+}
+
+p{
+    color: rgb(44, 44, 44);
+}
+
+.temp{
+    display: flex;
+}
+
+.temp h1{
+    align-self: center;
+    font-size: 60px;
+    color: rgb(56, 55, 55);
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.info_size{
+    width: 90%;
+    background-color: red;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #fde0c9;
+    display: flex;
+    justify-content: space-between;
+}
