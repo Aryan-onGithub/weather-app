@@ -5,38 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .base_img{
-            height: 200px;
-            position: absolute;
-        }
-        
-        .overlap_img{
-            height: 120px;
-            position: absolute;
-            left: 50px;
-            top: 70px;
-            
-        }
-
-        .container{
-            /* position: relative; */
-            /* display: flex; */
-            /* border: 2px solid; */
-            background-color: green;
-            
+        body{
+            background-color: black;
         }
     </style>
 </head>
 <body>
-    <!-- 
-    -base image
-    -image overlap
-    -down image 
-    -->
+    <input class="yourvalue" type="text" placeholder="inter something">
+    <button onclick="getvalue()">O</button>
+    <script>
 
-    <div class="container">
-        <img class="base_img" src="assets/base Sun.svg" alt="">
-        <img class="overlap_img" src="assets/base Cloud.svg " alt="">
-    </div>
+            function getvalue(){
+                // document.body.style.backgroundColor = "red"
+                let a = document.querySelector(".yourvalue").value
+                return a
+            }
+
+            let result = getvalue()
+            console.log(result);
+            
+
+    </script>
 </body>
 </html>
