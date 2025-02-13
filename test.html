@@ -11,18 +11,14 @@
     </style>
 </head>
 <body>
-    <input class="yourvalue" type="text" placeholder="inter something">
-    <button onclick="getvalue()">O</button>
+    <input type="text" id="myInput" placeholder="Enter something...">
+    <button onclick="storeInput()">Submit</button>
+
     <script>
-
-            function getvalue(){
-                // document.body.style.backgroundColor = "red"
-                let a = document.querySelector(".yourvalue").value
-                return a
-            }
-
-            let result = getvalue()
-            console.log(result);
+        function storeInput() {
+            var inputValue = document.getElementById("myInput").value;
+            console.log(inputValue);
+        }
             
 
     </script>
