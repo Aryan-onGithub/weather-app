@@ -19,7 +19,7 @@ function storeInput() {
       //  console.log(data);
        
        if (data.cod === "404") {
-           alert("City not found! Please try again.");
+           document.querySelector(".errormessage").style.display = "block"
            return;
        }
        
@@ -29,6 +29,8 @@ function storeInput() {
        wind.innerHTML = Math.floor(data.wind.speed) + "m/s";
        weatherC.innerHTML = data.weather[0].main;
        datee.innerHTML = (new Date(data.dt * 1000).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }));
-   }
+       document.querySelector(".content").style.display = "block"
+       document.querySelector(".phone").style.height = "95vh"
+    }
    checkWeather();
 }
