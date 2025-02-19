@@ -3,13 +3,12 @@
 body {
     background-color: rgb(34, 33, 33);
     font-family: "Nunito", serif;
-    display: flex;
-    /* justify-rtnt: center; */
 }
 
 .phone {
     /* height: 95vh; */
     /* padding-bottom: 25px; */
+    margin: auto;
     padding: 20px;
     box-sizing: border-box;
     width: 25vw;
@@ -104,4 +103,8 @@ p {
 
 .notify img {
     height: 20px;
+}
+
+.alarm{
+    display: none;
 }

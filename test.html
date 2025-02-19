@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online Alarm</title>
     <style>
-        body{
-            background-color: black;
+        body {
+            background-color: grey;
         }
     </style>
 </head>
+
 <body>
-    <input type="text" id="myInput" placeholder="Enter something...">
-    <button onclick="storeInput()">Submit</button>
+    <h1>Set Alarm</h1>
+    <label for="hours">Hours:</label>
+    <input type="number" id="hours" min="0" max="23"><br>
+    <label for="minutes">Minutes:</label>
+    <input type="number" id="minutes" min="0" max="59"><br>
+    <button onclick="setAlarm()">Set Alarm</button>
+
+    <audio id="alarmSound" src="notification-22-270130.mp3" preload="auto"></audio>
 
     <script>
-        function storeInput() {
-            var inputValue = document.getElementById("myInput").value;
-            console.log(inputValue);
-        }
-            
+        function setAlarm() {
+            document.getElementById('alarmSound').play();
+            alert("alarm set");
+            const hours = parseInt(document.getElementById('hours').value);
+            const minutes = parseInt(document.getElementById('minutes').value);
+            const alarmTime = new Date();
+            alarmTime.setHours(hours);
+            alarmTime.setMinutes(minutes);
+            alarmTime.setSeconds(0);
 
+            const checkAlarm = setInterval(() => {
+                const currentTime = new Date();
+                console.log(currentTime);
+
+                if (currentTime.getHours() === alarmTime.getHours() && currentTime.getMinutes() === alarmTime.getMinutes() && currentTime.getSeconds() === alarmTime.getSeconds()) {
+                    clearInterval(checkAlarm);
+                    document.getElementById('alarmSound').play();
+                    setTimeout(() => alert("Time's up!"), 100);
+                }
+
+            }, 1000);
+        }
     </script>
 </body>
+
 </html>
