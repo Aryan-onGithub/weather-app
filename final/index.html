@@ -11,10 +11,24 @@
 <body>
     <div class="phone">
         <nav>
-            <button class="notify"><img src="assets/Bell.png" alt=""></button>
+            <button onclick="document.querySelector('.alarm').style.display ='block'" class="notify"><img
+                    src="assets/Bell.png" alt=""></button>
             <input type="text" id="myInput" placeholder="Enter your Loaction">
-            <button onclick="storeInput()"><img src="assets/icon.svg" alt=""></button>
+            <button onclick="takeInput()"><img src="assets/icon.svg" alt=""></button>
         </nav>
+
+        <div class="alarm">
+            <h1>Set Alarm</h1>
+            <label for="place">Place:</label>
+            <input type="text" id="place"><br>
+            <label for="hours">Hours:</label>
+            <input type="number" id="hours" min="0" max="23"><br>
+            <label for="minutes">Minutes:</label>
+            <input type="number" id="minutes" min="0" max="59"><br>
+            <button onclick="setAlarm()">Set Alarm</button>
+        </div>
+
+        <audio id="alarmSound" src="assets/notification-22-270130.mp3" preload="auto"></audio>
 
         <div class="errormessage">
             Invalid location, please enter a valid city or country name. 😊🙏🏻
@@ -58,11 +72,12 @@
 
 <!-- things to add 
 
-3. notification: notify the current weather of city selected at the time user slelcted(maybe date too?)
-with a notification bell
+
+3. improve ui of notify and make it polished (give error message before submit)
 
 4. change the weather image according to the weateher condition
 5. add responsiveness
 6. able to add value using search button or enter key
+7. hide api key
 
 -->
