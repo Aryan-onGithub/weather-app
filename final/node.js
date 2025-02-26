@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 function takeInput(){
     var inputValue = document.getElementById("myInput").value;
     // console.log(inputValue);
@@ -7,7 +9,7 @@ function takeInput(){
 
 function result(loaction) {
     let place = loaction;
-   const apiKey = "cad7559e22b909c6eaa6574aaed98657";
+   const apiKey = process.env.apiKey;
    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&appid=";
    
    
